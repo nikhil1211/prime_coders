@@ -1,0 +1,29 @@
+
+{{#if user}}
+<form method="post" action="/users/Inte" id="re">
+    
+    <div class="form-group">
+      <label for="pwd" style="margin-left:500px">Enter Integer type question</label>
+      <input type="text" class="form-control" style="width:700px;margin-left:500px" id="pwd" name="question" placeholder="Question ?">
+    </div>
+    <div>
+      <label for="usr" style="margin-left:500px">Answer</label>
+      <input type="text" class="form-control" style="width:400px;margin-left:500px" id="usr" name="answer" placeholder="Answer">
+    </div>
+    
+<br>
+
+
+  <button type="submit" style="margin-left:500px" class="btn btn-primary btn-lg" >SUBMIT</button>
+  </form>
+        {{else}}
+        <form class="form-basic">
+
+            <div class="form-title-row">
+                <h1>You are not logged In</h1>
+        
+              </form>
+              {{/if}}
+       
+
+       

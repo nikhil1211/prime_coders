@@ -1,0 +1,81 @@
+
+{{#if user}}
+
+<form class="form-basic" id="nk">
+<!-- 
+            <div class="form-title-row">
+                <h1>IIT KANPUR</h1>
+                <br></br> -->
+
+
+<div id="myframe" class="nk">
+<iframe src="http://home.iitk.ac.in/~himnshu/studentsearch/profile.php?username={{user.username}}" width="600" height="600" style=" border-left: 20px solid #9633FF  ; border-right: 20px solid #9633FF;border-top: 20px solid #9633FF;"></iframe>
+</div>
+  <!-- 
+  
+  <img src="http://oa.cc.iitk.ac.in:8181/Oa/Jsp/Photo/{{user.roll}}_0.jpg" class="img-circle" alt="INA" width="250" height="236" style="margin-right:180px">
+</div>
+       <!--          <div class="ih-item circle effect3 left_to_right"><a href="#">
+        <div class="img"><img src="http://oa.cc.iitk.ac.in:8181/Oa/Jsp/Photo/{{user.roll}}_0.jpg" alt="img"></div>
+        <div class="info">
+          <h3>Heading here</h3>
+          <p>Description goes here</p>
+        </div></a></div>
+           -->
+<!-- <div class="card">
+  <img class="card-img-top" src="http://oa.cc.iitk.ac.in:8181/Oa/Jsp/Photo/{{user.roll}}_0.jpg" alt="Card image cap">
+  <div class="card-block">
+   
+    
+    <a href="http://home.iitk.ac.in/~{{user.username}}" class="btn btn-primary">Go To Homepage</a>
+  </div>
+</div> -->
+
+          <!--   </div> -->
+<!-- 
+
+            <div class="form-title-row">
+                <h1>
+                    <span>Full name : {{user.name}}</span>
+                   
+                </h1>
+            </div>
+            <div class="form-title-row">
+                <h1>
+                    <span>Email : {{user.email}}</span>
+                   
+                </h1>
+            </div>
+            <div class="form-title-row">
+                <h1>
+                    <span>Username : {{user.username}}</span>
+                   
+                </h1>
+            </div>
+            <div class="form-title-row">
+                <h1>
+                    <span>ID : {{user.roll}}</span>
+                   
+                </h1>
+            </div>
+            <div class="form-title-row">
+                <h1>
+                    <span>Type : {{user.type}}</span>
+                   
+                </h1>
+            </div> --><!--  --> 
+              </form>
+{{else}}
+
+<form class="form-basic">
+
+            <div class="form-title-row">
+                <h1>You are not logged In</h1>
+        
+              </form>
+              {{/if}}
+         
+            
+
+
+        

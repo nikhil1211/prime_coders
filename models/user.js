@@ -15,6 +15,18 @@ var UserSchema = mongoose.Schema({
 	},
 	name: {
 		type: String
+	},
+	type: {
+		type: String
+	},
+	time :{
+		type:String
+	},
+	ip :{
+		type : String
+	},
+	roll :{
+		type : String
 	}
 });
 
@@ -31,6 +43,10 @@ module.exports.createUser = function(newUser, callback){
 
 module.exports.getUserByUsername = function(username, callback){
 	var query = {username: username};
+	User.findOne(query, callback);
+}
+module.exports.getUserByType = function(type, callback){
+	var query = {type: type};
 	User.findOne(query, callback);
 }
 

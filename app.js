@@ -10,9 +10,29 @@ var passport = require('passport');
 var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
+var ip = require('ip');
+console.log("Server Running at "+ip.address()); //returns true 
+// var Test = require('./models/report');
+// Test.findOneRandom(function(err, element) {
+//   if (err) console.log(err);
+//   else console.log(element);
+// });
 
+
+
+
+
+
+//making connection to mongodb
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
+
+
+
+
+var iitk = ip.address();
+// var collection = db.collection('reports');
+// console.log(collection);
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -20,7 +40,7 @@ var users = require('./routes/users');
 // Init App
 var app = express();
 
-// View Engine
+// View Engine and setting all views to views
 app.set('views', path.join(__dirname, 'views'));
 app.engine('handlebars', exphbs({defaultLayout:'layout'}));
 app.set('view engine', 'handlebars');

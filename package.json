@@ -18,10 +18,12 @@
     "express-messages": "*",
     "express-session": "*",
     "express-validator": "*",
+    "handlebars-helpers": "^0.7.5",
     "mongodb": "*",
     "mongoose": "*",
     "passport": "*",
     "passport-http": "*",
-    "passport-local": "*"
+    "passport-local": "*",
+    "jasmine-node": "^1.14.5"
   }
 }

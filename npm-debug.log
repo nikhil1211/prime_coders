@@ -1,0 +1,115 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs', '/usr/bin/npm', 'install' ]
+2 info using npm@1.4.21
+3 info using node@v0.10.25
+4 warn package.json loginapp@1.0.0 No repository field.
+5 warn package.json loginapp@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose install where, deps [ '/home/nikumar/Desktop/quiz/1',
+7 verbose install   [ 'bcryptjs',
+7 verbose install     'body-parser',
+7 verbose install     'connect-flash',
+7 verbose install     'cookie-parser',
+7 verbose install     'express',
+7 verbose install     'express-handlebars',
+7 verbose install     'express-messages',
+7 verbose install     'express-session',
+7 verbose install     'express-validator',
+7 verbose install     'handlebars-helpers',
+7 verbose install     'mongodb',
+7 verbose install     'mongoose',
+7 verbose install     'passport',
+7 verbose install     'passport-http',
+7 verbose install     'passport-local',
+7 verbose install     'jasmine-node' ] ]
+8 info preinstall loginapp@1.0.0
+9 warn package.json pause@0.0.1 No repository field.
+10 verbose readDependencies using package.json deps
+11 verbose already installed skipping cookie-parser@^1.4.1 /home/nikumar/Desktop/quiz/1
+12 verbose already installed skipping express@* /home/nikumar/Desktop/quiz/1
+13 verbose already installed skipping connect-flash@* /home/nikumar/Desktop/quiz/1
+14 verbose already installed skipping express-handlebars@* /home/nikumar/Desktop/quiz/1
+15 verbose already installed skipping express-messages@* /home/nikumar/Desktop/quiz/1
+16 verbose already installed skipping express-session@* /home/nikumar/Desktop/quiz/1
+17 verbose already installed skipping express-validator@* /home/nikumar/Desktop/quiz/1
+18 verbose already installed skipping handlebars-helpers@^0.7.5 /home/nikumar/Desktop/quiz/1
+19 verbose already installed skipping mongodb@* /home/nikumar/Desktop/quiz/1
+20 verbose already installed skipping mongoose@* /home/nikumar/Desktop/quiz/1
+21 verbose already installed skipping passport@* /home/nikumar/Desktop/quiz/1
+22 verbose already installed skipping passport-http@* /home/nikumar/Desktop/quiz/1
+23 verbose already installed skipping passport-local@* /home/nikumar/Desktop/quiz/1
+24 verbose cache add [ 'jasmine-node@^1.14.5', null ]
+25 verbose cache add name=undefined spec="jasmine-node@^1.14.5" args=["jasmine-node@^1.14.5",null]
+26 verbose parsed url { protocol: null,
+26 verbose parsed url   slashes: null,
+26 verbose parsed url   auth: null,
+26 verbose parsed url   host: null,
+26 verbose parsed url   port: null,
+26 verbose parsed url   hostname: null,
+26 verbose parsed url   hash: null,
+26 verbose parsed url   search: null,
+26 verbose parsed url   query: null,
+26 verbose parsed url   pathname: 'jasmine-node@^1.14.5',
+26 verbose parsed url   path: 'jasmine-node@^1.14.5',
+26 verbose parsed url   href: 'jasmine-node@^1.14.5' }
+27 verbose already installed skipping bcryptjs@* /home/nikumar/Desktop/quiz/1
+28 verbose already installed skipping body-parser@* /home/nikumar/Desktop/quiz/1
+29 verbose cache add name="jasmine-node" spec="^1.14.5" args=["jasmine-node","^1.14.5"]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: '^1.14.5',
+30 verbose parsed url   path: '^1.14.5',
+30 verbose parsed url   href: '^1.14.5' }
+31 verbose addNamed [ 'jasmine-node', '^1.14.5' ]
+32 verbose addNamed [ null, '>=1.14.5-0 <2.0.0-0' ]
+33 silly lockFile 5977924f-jasmine-node-1-14-5 jasmine-node@^1.14.5
+34 verbose lock jasmine-node@^1.14.5 /home/nikumar/.npm/5977924f-jasmine-node-1-14-5.lock
+35 silly addNameRange { name: 'jasmine-node',
+35 silly addNameRange   range: '>=1.14.5-0 <2.0.0-0',
+35 silly addNameRange   hasData: false }
+36 verbose request where is /jasmine-node
+37 verbose request registry https://registry.npmjs.org/
+38 verbose request id 7a1a9616e89d6e7d
+39 verbose url raw /jasmine-node
+40 verbose url resolving [ 'https://registry.npmjs.org/', './jasmine-node' ]
+41 verbose url resolved https://registry.npmjs.org/jasmine-node
+42 verbose request where is https://registry.npmjs.org/jasmine-node
+43 info trying registry request attempt 1 at 14:36:50
+44 http GET https://registry.npmjs.org/jasmine-node
+45 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+46 info trying registry request attempt 2 at 14:37:01
+47 http GET https://registry.npmjs.org/jasmine-node
+48 info retry will retry, error on last attempt: Error: SELF_SIGNED_CERT_IN_CHAIN
+49 info trying registry request attempt 3 at 14:38:06
+50 http GET https://registry.npmjs.org/jasmine-node
+51 silly lockFile 5977924f-jasmine-node-1-14-5 jasmine-node@^1.14.5
+52 silly lockFile 5977924f-jasmine-node-1-14-5 jasmine-node@^1.14.5
+53 error Error: SELF_SIGNED_CERT_IN_CHAIN
+53 error     at SecurePair.<anonymous> (tls.js:1370:32)
+53 error     at SecurePair.EventEmitter.emit (events.js:92:17)
+53 error     at SecurePair.maybeInitFinished (tls.js:982:10)
+53 error     at CleartextStream.read [as _read] (tls.js:469:13)
+53 error     at CleartextStream.Readable.read (_stream_readable.js:320:10)
+53 error     at EncryptedStream.write [as _write] (tls.js:366:25)
+53 error     at doWrite (_stream_writable.js:223:10)
+53 error     at writeOrBuffer (_stream_writable.js:213:5)
+53 error     at EncryptedStream.Writable.write (_stream_writable.js:180:11)
+53 error     at write (_stream_readable.js:583:24)
+53 error     at flow (_stream_readable.js:592:7)
+53 error     at Socket.pipeOnReadable (_stream_readable.js:624:5)
+54 error If you need help, you may report this *entire* log,
+54 error including the npm and node versions, at:
+54 error     <http://github.com/npm/npm/issues>
+55 error System Linux 4.2.0-42-generic
+56 error command "/usr/bin/nodejs" "/usr/bin/npm" "install"
+57 error cwd /home/nikumar/Desktop/quiz/1
+58 error node -v v0.10.25
+59 error npm -v 1.4.21
+60 verbose exit [ 1, true ]
