@@ -11,7 +11,8 @@ var LocalStrategy = require('passport-local').Strategy;
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
 var ip = require('ip');
-console.log("Server Running at "+ip.address()); //returns true 
+console.log("Server Running at "+ip.address());
+var random = require('mongoose-random'); //returns true 
 // var Test = require('./models/report');
 // Test.findOneRandom(function(err, element) {
 //   if (err) console.log(err);
@@ -22,10 +23,11 @@ console.log("Server Running at "+ip.address()); //returns true
 
 
 
-
 //making connection to mongodb
 mongoose.connect('mongodb://localhost/loginapp');
 var db = mongoose.connection;
+
+
 
 
 

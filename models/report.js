@@ -1,4 +1,6 @@
 var mongoose = require('mongoose');
+var async = require('async');
+
 // var random = require('mongoose-simple-random');
 
 // User Schema
@@ -61,16 +63,24 @@ module.exports.getReportByType = function(type, callback){
 	Report.findOne(query, callback);
 }
 
-module.exports.getReportByRandom = function(type, callback){
+// Report.statics.random = function(cb) {
+//   this.count(function(err, count) {
+//     if (err) return cb(err);
+//     var rand = Math.floor(Math.random() * count);
+//     this.findOne().skip(rand).exec(cb);
+//   }.bind(this));
+// };
+// console.log(Report.statics.random);
+// module.exports.getReportByRandom = function(type, callback){
 	// var query = {type: type};
-	var query = {
-    state: 'OK',
-    rnd: {
-        $gte: Math.random()
-    }
-};
+// 	var query = {
+//     state: 'OK',
+//     rnd: {
+//         $gte: Math.random()
+//     }
+// };
 
-var randomElement = { $query: query, $orderby: { rnd: 1 } };
-	Report.findOne(randomElement, callback);
-}
+// var randomElement = Report.findOne({ $query: query, $orderby: { rnd: 1 } });
+// console.log(randomElement);
+// }
 

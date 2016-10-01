@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 var bcrypt = require('bcryptjs');
-
+// var random = require('mongoose-random');
 // User Schema
 var UserSchema = mongoose.Schema({
 	username: {
@@ -29,6 +29,13 @@ var UserSchema = mongoose.Schema({
 		type : String
 	}
 });
+
+
+// UserSchema.plugin(random, { path: 'r' });
+// var ran = mongoose.model('ran',UserSchema);
+// ran.findRandom().limit(10).exec(function (err, username) {
+//   console.log(username);
+// });
 
 var User = module.exports = mongoose.model('User', UserSchema);
 

@@ -1,10 +1,13 @@
 var mongoose = require('mongoose');
-
+var random = require('mongoose-random');
 
 // User Schema
-var report_primary = 1;
+var match_primary = 1;
 var MatchSchema = mongoose.Schema({
-	
+	description :
+	{
+		type : String,
+	},
 	option_1: {
 		type: String
 	},
@@ -53,6 +56,12 @@ var MatchSchema = mongoose.Schema({
 	}
 
 });
+MatchSchema.plugin(random, { path: 'r' });
+var ran = mongoose.model('ran',MatchSchema);
+ran.findRandom().limit(10).exec(function (err, matches) {
+  console.log(matches);
+});
+
 
 var Match = module.exports = mongoose.model('Match', MatchSchema);
 

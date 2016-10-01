@@ -10,7 +10,17 @@ var Match =require('../models/match')
 var Inte =require('../models/Inte')
 var quiz =require('../models/quiz')
 // Register
+
+
+
+
 router.get('/register', function(req, res){
+	res.render('register');
+});
+router.get('/paper', function(req, res){
+	res.render('paper');
+});
+router.get('/download', function(req, res){
 	res.render('register');
 });
 router.get('/about', function(req, res){
@@ -50,7 +60,15 @@ router.get('/login', function(req, res){
 });
 
 
-//get time
+// var mongoose = require('mongoose');
+// mongoose.connect('mongodb://localhost/loginapp');
+// var db = mongoose.connection;
+// var query = { state: 'OK' };
+// var n = db.matches.count(query);
+// var r = Math.floor(Math.random() * n);
+
+// var randomElement = db.matches.find(query).limit(1).skip(r);
+// //get time
 
 function getDateTime() {
 
@@ -86,7 +104,7 @@ router.use(function(req, res, next) {
     next();
 });
 
-
+// console.log(db.)
 
 // Register User
 router.post('/register', function(req, res){
@@ -197,8 +215,8 @@ router.post('/report', function(req, res){
 		//x
 	});
 
-console.log(req.body.time);
-console.log(req.time);
+// console.log(req.body.time);
+// console.log(req.time);
 // console.log(report.time);
 // console.log(report.body.time);
 
@@ -218,12 +236,12 @@ console.log(req.time);
 			console.log('|User-Agent: ' + req.headers['user-agent']);
 			console.log("|----------------------------------------------------------------------------------")
 
-
+   res.redirect('/users/dashboard');
 		});
 
 		req.flash('success_msg', 'You Have submiited the MCQ');
 
-		res.redirect('/');
+		// res.redirect('/');
 	});
 
  
@@ -266,8 +284,8 @@ router.post('/Inte', function(req, res){
 		//x
 	});
 
-console.log(req.body.time);
-console.log(req.time);
+// console.log(req.body.time);
+// console.log(req.time);
 // console.log(report.time);
 // console.log(report.body.time);
 
@@ -279,16 +297,16 @@ console.log(req.time);
 			console.log("|QUIZ submiited with following question at ");
 			console.log("|IP: "+req.ip);
 			console.log("|Question : "+req.body.question+"?");
-	        console.log("|correct: "+req.body.correct);
+	        console.log("|correct: "+req.body.answer);
 			console.log('|User-Agent: ' + req.headers['user-agent']);
 			console.log("|----------------------------------------------------------------------------------")
-
+            res.redirect('/users/dashboard');
 
 		});
 
 		req.flash('success_msg', 'You Have submiited the Integer type question');
 
-		res.redirect('/');
+		// res.redirect('/');
 	});
 
 
@@ -334,7 +352,7 @@ router.post('/match', function(req, res){
 	// 	});
 	// } else {
 		var newMatch = new Match({
-			key: reportPrimaryKey,
+			// key: reportPrimaryKey,
 			option_1: option_1,
 			option_2:option_2,
 			option_3: option_3,
@@ -374,19 +392,19 @@ router.post('/match', function(req, res){
 			console.log('|User-Agent: ' + req.headers['user-agent']);
 			console.log("|----------------------------------------------------------------------------------")
 
-
+res.redirect('/users/dashboard');
 		});
 
 		req.flash('success_msg', 'You Have submiited the Match-Matrix');
 
-		res.redirect('/');
+		// res.redirect('/');
 	});
 
 
 
-console.log(Report.getReportByRandom(1,function(err,req){
-  if(err) throw err;
-}));
+// console.log(Report.getReportByRandom(1,function(err,req){
+//   if(err) throw err;
+// }));
 
 //
 passport.use(new LocalStrategy(
